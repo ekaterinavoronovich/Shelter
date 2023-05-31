@@ -1,0 +1,121 @@
+.wrapper-header {
+  max-width: 1280px;
+  height: 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px 30px 40px;
+  @include media-tablet{
+  padding: 30px;  
+  }
+  @include media-mobilesmall{
+  padding: 30px 20px 0px 20px;
+ 
+  }
+}
+
+.header {
+  width: 100%;
+  background-image: url("../../assets/images/start-screen-gradient-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 186px;
+  height: 60px;
+}
+
+.header-logo-title {
+  @extend %font-weight;
+  font-family: $font-main;
+
+  font-size: 3.2rem;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: $color-primary;
+  margin-block-end: 0.45em;
+  @include media-mobilesmall{
+    margin-block-end: 0.35em;  
+  }
+}
+
+.header-logo-subtitle {
+  font-family: $font-second;
+  @extend %font-weight;
+  font-size: 1.3rem;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+}
+
+
+.nav-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  max-width: 443px;
+  gap: 38px;
+  @media (max-width:767px) {
+    display: none;
+  }
+}
+
+@media (max-width:700px){
+  .hamburger {
+    display: block;
+  } 
+  .nav-menu {
+    display: none;
+  }
+}
+
+
+.menu-item-link {
+  font-family: $font-second;
+  @extend %font-weight;
+  font-size: 1.5rem;
+  line-height: 160%;
+  color: #fafafa;
+  text-decoration: none;
+  position: relative;
+  @extend %transition;
+  scroll-behavior: smooth;
+}
+
+.menu-item-link::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background-color: $color-primary;
+  width: 0;
+  left: 50%;
+  bottom: -3px;
+  transform: translateX(-50%);
+  transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+}
+
+.menu-item-link:hover {
+  color: $color-primary;
+  cursor: pointer;
+}
+
+.menu-item-link:hover::after {
+  width: 100%;
+}
+
+.menu-item-link:active {
+  background-color: $color-hover;
+}
+
+.disabled-item-link {
+  pointer-events: none;
+
+}
+

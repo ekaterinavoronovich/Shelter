@@ -1,0 +1,240 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.disabled-item-link {
+  pointer-events: none;
+  cursor: default;
+}
+
+.header_light {
+  width: 100%;
+  background: #ffffff;
+  height: 120px;
+}
+
+.header-logo-title_light {
+  font-family: $font-main;
+  @extend %font-weight;
+  font-size: 3.2rem;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: $color-dark-gray;
+  margin-bottom: 10px;
+}
+
+.header-logo-subtitle_light {
+  font-family: $font-second;
+  @extend %font-weight;
+  font-size: 1.3rem;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  color: #292929;
+}
+
+.menu-item-link_light {
+  color: $color-dark-gray;
+}
+
+.section-pets {
+  background: #f6f6f6;
+  background-size: cover;
+  height: 100%;
+  padding: 80px 30px 90px 30px;
+
+  @include media-tablet {
+    padding: 80px 30px 65px 30px;
+  }
+
+  @include media-mobilesmall {
+    padding: 42px 10px 42px 10px;
+  }
+}
+
+.wrapper-section-pets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+
+  @include media-tablet {
+    gap: 15px;
+  }
+
+  @include media-mobilesmall {
+    gap: 25px;
+  }
+}
+
+.title-section-pets {
+  max-width: 400px;
+  font-family: $font-main;
+  font-size: 3.5rem;
+  line-height: 130%;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: $color-dark-gray;
+
+  @media (max-width: 460px) {
+    font-size: 2.5rem;
+  }
+}
+
+.card-conteiner {
+  width: 270px;
+  height: 435px;
+  background: #fafafa;
+  border-radius: 9px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.title-card {
+  font-family: $font-main;
+  @extend %font-weight;
+  font-size: 2rem;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  color: $color-dark-gray;
+}
+
+.img-card {
+  width: 270px;
+  height: 270px;
+}
+
+.btn-card-conteiner {
+  @include button(187px, 52px, 0, 100px);
+  border: 2px solid #f1cdb3;
+  font-family: $font-main;
+  @extend %font-weight;
+  font-size: 1.7rem;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #292929;
+}
+
+.card-conteiner:hover {
+  border: 1px solid rgba(172, 167, 164, 0.2);
+  box-shadow: 12px 13px 8px -1px rgba(172, 167, 164, 0.2);
+}
+
+.card-conteiner:hover > .btn-card-conteiner {
+  border: 2px solid $color-hover;
+  background-color: $color-hover;
+  @extend %transition;
+}
+
+.card-conteiner:hover > .title-card {
+  font-size: 3rem;
+  @extend %transition;
+}
+
+.wrapper-button_paginator {
+  max-width: 340px;
+  margin-bottom: 0px;
+
+  @include media-tablet {
+    margin-top: 20px;
+  }
+}
+
+.wrapper-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+}
+
+.wrapper-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  height: 100%;
+
+  @include media-tablet {
+    gap: 20px 40px;
+  }
+}
+
+.button_paginator {
+  @include button(52px, 52px, 0, 100px);
+  border: 2px solid #cdcdcd;
+  margin: 5px;
+  font-size: 2.1rem;
+
+  @include media-mobile {
+    margin: 0px;
+  }
+
+  &:hover {
+    background-color: $color-hover;
+    border-color: $color-hover;
+  }
+
+  &:active {
+    background-color: $color-primary;
+    border-color: $color-primary;
+  }
+}
+.btn_disable {
+  border: 2px solid #cdcdcd;
+  color: #cdcdcd;
+}
+
+.btn_active {
+  border-color: $color-primary;
+}
+
+.number_page {
+  background-color: $color-primary;
+}
+
+.link-logo {
+  text-decoration: none;
+  color: $color-dark-gray;
+
+  :hover {
+    color: $color-primary;
+  }
+}
+
+.link-mail {
+  text-decoration: none;
+  color: $color-primary;
+}
+
+.link-mail:hover {
+  color: $color-hover;
+}
+
+.link-mail:active {
+  font-size: larger;
+}
+
+.first-link {
+  display: inline;
+  border-bottom: 3px solid $color-primary;
+}
+.hamburger-line_dark {
+  background-color: #000;
+}

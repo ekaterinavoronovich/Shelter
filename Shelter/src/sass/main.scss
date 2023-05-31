@@ -1,0 +1,42 @@
+
+@charset "UTF-8";
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/mixins',
+  'abstracts/placeholders';
+
+// 2. Vendors
+  @import '../../node_modules/swiper/swiper-bundle.css';
+  @import '../../node_modules/swiper/swiper.css';
+  
+
+// 3. Base stuff
+@import
+  'base/fonts';
+  
+ 
+
+// 4. Layout-related sections
+@import
+  'layout/header',
+  'layout/footer',
+  'layout/mobile-menu';
+
+// 5. Components
+@import
+  'components/carousel',
+  'components/hamburger',
+  'components/modal-window';
+  
+
+ 
+
+// 6. Page-specific styles
+@import
+  'pages/main-page',
+  'pages/pets-page';
+
+
+
